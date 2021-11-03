@@ -1,4 +1,4 @@
-from Homescreen import Homescreen
+from Inicio import Inicio
 
 
 class App:
@@ -14,22 +14,22 @@ class App:
 
 		self.running = True
 
-	def run(self): # defines the flow of the app: homescreen -> game -> exit
+	def run(self): 
 
-		from Game import Game
+		from Jogo import Jogo
 
-		mode = "homescreen"
-		homescreen = Homescreen(self.screen)
+		mode = "tela inicial"
+		homescreen = Inicio(self.screen)
 		while self.running:
 
-			if mode == "homescreen":
+			if mode == "tela inicial":
 				mode, player1, player2 = homescreen.run()
-				if mode != "homescreen":
-					game = Game(self.screen, player1, player2)
-			elif mode == "game":
+				if mode != "tela inicial":
+					game = Jogo(self.screen, player1, player2)
+			elif mode == "jogo":
 				mode, player1, player2 = game.run()
-				if mode != "game":
-					homescreen = Homescreen(self.screen)
+				if mode != "jogo":
+					homescreen = Inicio(self.screen)
 			else:
 				self.running = False
 			

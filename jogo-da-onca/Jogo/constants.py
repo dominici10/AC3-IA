@@ -1,8 +1,15 @@
+import pygame
+
+
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 RED = (255, 0, 0)
 GRAY = (211, 211, 211)
+BLUE = (173, 216, 230)
 GREEN = (0, 255, 0)
+VERDEX = (57, 255, 20)
+ONCA = pygame.transform.scale(pygame.image.load('C:/Users/madom/Downloads/jogo-da-onca/Jogo/img/onca.png'), (60, 60))
+CACHORRO = pygame.transform.scale(pygame.image.load('C:/Users/madom/Downloads/jogo-da-onca/Jogo/img/cachorro.png'), (50, 50))
 
 SCREEN_HEIGHT = 800
 SCREEN_WIDTH = 800

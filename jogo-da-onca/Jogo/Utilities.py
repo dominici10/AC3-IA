@@ -63,7 +63,7 @@ class Utilities:
 					cougarPos = (i, j)
 
 		if cntDogs < 10:
-			return "Jaguar won"
+			return "Vitória Onça"
 
 		import constants
 
@@ -74,7 +74,7 @@ class Utilities:
 				blockCnt += 1
 
 		if blockCnt == len(constants.ADJACENCY_LIST[Utilities.cellToNode(grid, cougarPos)]):
-			return "Dogs won"
+			return "Vitória Cachorro"
 
 		return None
 
